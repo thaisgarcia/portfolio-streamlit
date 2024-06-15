@@ -24,6 +24,7 @@ with st.container():
         orientation='horizontal'
     )
 
+
 if selected == 'Sobre mim':
     with st.container():
         col1, col2 = st.columns([1, 3])
@@ -31,7 +32,7 @@ if selected == 'Sobre mim':
             st.markdown(
                 """
                     <div style='display: flex; justify-content: center; align-items:center; height:32vh;'>
-                        <img src='https://media.licdn.com/dms/image/D4D03AQGpByIaA_r2-Q/profile-displayphoto-shrink_800_800/0/1703289826749?e=1712793600&v=beta&t=MBs9PJm05xwjjI4EgCrcze3jkMCpJ-W7qrJ1xYDn4YM' style='width:180px; border-radius: 20px; display: flex;'/>
+                        <img src='https://media.licdn.com/dms/image/D4D03AQGOp3exzAUoPQ/profile-displayphoto-shrink_400_400/0/1712425464854?e=1723680000&v=beta&t=LUe6aAAC08s7MY5Oo7dyZ_LnCIG16wYWFRTw_GQR_rc' style='width:180px; border-radius: 20px; display: flex;'/>
                     </div>
                 """, unsafe_allow_html=True, )
         with col2:
@@ -46,8 +47,9 @@ if selected == 'Sobre mim':
                         <strong>Técnica em Desenvolvimento de Sistemas</strong>. Atualmente, estou cursando o Tecnólogo 
                         em <strong>Ciência de Dados</strong> na <strong>Faculdade de Tecnologia de Ourinhos (FATEC)</strong>.
                         <br></br>
-                        No âmbito profissional, integro ativamente a equipe do Núcleo Tecnológico de Educação Aberta (NTEA)
-                        do Centro Universitário das Faculdades Integradas de Ourinhos (UNIFIO). Ofereço suporte técnico
+                        No âmbito profissional, integro ativamente a equipe do Núcleo Tecnológico de Educação Aberta (NTEA), 
+                        Núcleo de Educação a Distância (NEAD), e equipe multidisciplinar
+                        no Centro Universitário das Faculdades Integradas de Ourinhos (UNIFIO). Ofereço suporte técnico
                         a professores, coordenadores e estudantes no Ambiente Virtual de Aprendizagem (AVA). 
                         Além disso, sou responsável pela análise e produção de relatórios, bem como pela implementação
                         de novas tecnologias essenciais para a melhoria contínua desse ambiente.
@@ -63,11 +65,12 @@ if selected == 'Sobre mim':
             data = f.read()
             timeline(data, height=600)
 
-elif selected == 'Habilidades':
+if selected == 'Habilidades':
     with st.container():
         option = st.selectbox(
             'Selecione uma opção:',
-            ('Linguagens', 'Bibliotecas Python Para Data Science', 'Frameworks'))
+            ('Linguagens', 'Bibliotecas Python Para Data Science', 'Frameworks')
+        )
 
         if option == 'Linguagens':
             st.write("")
@@ -133,23 +136,88 @@ elif selected == 'Habilidades':
             st.markdown(
                 """
                     FRAMEWORKS PYTHON: 
-    
+
                     ![Dash](https://img.shields.io/badge/Dash-000?style=for-the-badge&logo=dash)
                     ![Flask](https://img.shields.io/badge/Flask-000?style=for-the-badge&logo=flask)
-    
+
                     <br>
-    
+
                     FRAMEWORKS CSS:
-    
+
                     ![Bootstrap](https://img.shields.io/badge/Bootstrap-000?style=for-the-badge&logo=bootstrap)
                     ![Tailwind](https://img.shields.io/badge/Tailwind-000?style=for-the-badge&logo=tailwind)
                 """, unsafe_allow_html=True)
+
 
 elif selected == 'Projetos':
     with st.container():
         st.markdown(
             """
             <div class="container">
+                <div class="card-container">
+                    <div class="card">
+                        <div class="front-content">
+                            <p class="heading">Caixeiro Viajante</p>
+                        </div>
+                        <div class="content">
+                            <p>
+                                Este projeto combina automação web com algoritmos de otimização de rotas para resolver o 
+                                problema do caixeiro viajante, utilizando Python, Selenium e Google Maps.
+                            </p>
+                        </div>
+                    </div>
+                    <button class="cta">
+                        <a href="https://github.com/thaisgarcia/caixeiro-viajante" target="_blank">
+                            <span class="hover-underline-animation"> Ver código </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                            </svg>
+                        </a>
+                    </button>
+                </div>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="front-content">
+                            <p class="heading">Conversor de Arquivos</p>
+                        </div>
+                        <div class="content">
+                            <p>
+                                Este repositório contém scripts Python para processar dados destinados ao Censo do MEC, 
+                                incluindo a leitura de um arquivo TXT, a geração de um arquivo Excel e a conversão desse 
+                                arquivo Excel de volta para um formato de texto.
+                            </p>
+                        </div>
+                    </div>
+                    <button class="cta">
+                        <a href="https://github.com/thaisgarcia/convert-censo-file" target="_blank">
+                            <span class="hover-underline-animation"> Ver código </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                            </svg>
+                        </a>
+                    </button>
+                </div>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="front-content">
+                            <p class="heading">Chatbot Barbearia</p>
+                        </div>
+                        <div class="content">
+                            <p>
+                                Criação de um chatbot utilizando a biblioteca ChatterBot e o framework Flask.
+                                <br><i>Projeto destinado a uma disciplina da faculdade, não deu tempo de finalizar.</i>
+                            </p>
+                        </div>
+                    </div>
+                    <button class="cta">
+                        <a href="https://github.com/thaisgarcia/chatterbot-flask" target="_blank">
+                            <span class="hover-underline-animation"> Ver código </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                            </svg>
+                        </a>
+                    </button>
+                </div>
                 <div class="card-container">
                     <div class="card">
                         <div class="front-content">
