@@ -32,7 +32,7 @@ if selected == 'Sobre mim':
             st.markdown(
                 """
                     <div style='display: flex; justify-content: center; align-items:center; height:32vh;'>
-                        <img src='https://media.licdn.com/dms/image/D4D03AQGOp3exzAUoPQ/profile-displayphoto-shrink_400_400/0/1712425464854?e=1723680000&v=beta&t=LUe6aAAC08s7MY5Oo7dyZ_LnCIG16wYWFRTw_GQR_rc' style='width:180px; border-radius: 20px; display: flex;'/>
+                        <img src='https://media.licdn.com/dms/image/v2/D4D03AQFAMnP7fexbSQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1728661180646?e=1734566400&v=beta&t=nA6Z8IoXlHsIqfltGtO3wJa-PYkKWX68PsV17rLWQtQ' style='width:180px; border-radius: 20px; display: flex;'/>
                     </div>
                 """, unsafe_allow_html=True, )
         with col2:
